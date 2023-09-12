@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Atualização de Data e Hora</title>
+    <style>
+        body {
+            background-color: #e4adadc9;
+            text-align: center;
+            margin-left: 300px;
+            margin-right: 300px;
+            margin-bottom: -100px;
+        }
+
+        img{
+            width: 400px;
+            height: 300px;
+            padding:none;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Davi ajudarte Lopes</h1>
+
+    <div id="data-hora"></div>
+    <script>
+        function atualizarDataHora() {
+            const agora = new Date();
+            const dataHoraElement = document.getElementById('data-hora');
+            dataHoraElement.textContent = `Data e hora atual: ${agora.toLocaleString()}`;
+        }
+        atualizarDataHora();
+        setInterval(atualizarDataHora, 1000);
+    </script>
+    
+    <h1>Bauru 1000 Grau</h1>
+    <a onmouseover="mudare('xbox', 'xboxx.png')" onmouseout="mudare('xbox', 'xboxs.png')">
+        <img src="xboxs.png" border="0" id="xbox">
+    </a>
+    
+    </script>
+    <a onmouseover="mudar('ps5', 'ps5.png')" onmouseout="mudar('ps4', 'ps4.png')">
+        <img src="ps4.png" border="0" id="ps4">
+    </a>
+ 
+    <script type="text/javascript">
+        function mudar(objeto, imagem) {
+            ps4.src = imagem;
+        }
+        </script>
+
+            <script type="text/javascript">
+        function mudare(objeto, imagem) {
+            xbox.src = imagem;
+        }
+    </script>
+   
+
+    
+</body>
+
+</html>
