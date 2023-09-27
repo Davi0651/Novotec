@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Exemplo de DOM</title>
+
+        <style type="text/css">
+            .primeira{
+                border: 1px solid #CCC;
+                padding: 10px;
+                background-color: #F5DEB3;
+                color: #333;
+                width: 500px;
+            }
+            .segunda{
+                background-color: #1E90FF;
+                border: 5px solid #F90;
+                font-family: Georgia, serif;
+                font-size: 12px;
+                width: 200px;
+                padding: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Exemplo de como alterar classes de CSS</h1>
+        <p><a href="javascript:chamaDOM('texto');">Alterar classe</a></p>
+        <p id="texto" class="primeira">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae odio libero. 
+            Nullam convallis purus at elementum tincidunt. Etiam tincidunt tempor ex vitae lobortis. 
+            Curabitur sagittis in ligula in fermentum. Aliquam eu rhoncus felis, a bibendum elit. 
+            Quisque nec lacus a mauris pretium vulputate in sed massa. Aliquam volutpat nibh eget consectetur 
+            hendrerit. Cras finibus fermentum sem, non dictum leo sagittis eu. Suspendisse pretium, diam 
+            non ultricies rutrum, velit massa imperdiet augue, at vestibulum elit augue vitae erat. Praesent 
+            mattis tempus feugiat.
+        </p>
+
+        <script type="text/javascript">
+            // Declarando a função
+            function chamaDOM(id) {
+                // Criando a variável
+                var elemento = '';
+
+                elemento = document.getElementById(id);
+                if(elemento.className == 'primeira') {
+                    elemento.className = 'segunda';
+                }
+                else{
+                    elemento.className = 'primeira';
+                }
+            }
+        </script>
+    </body>
+</html>

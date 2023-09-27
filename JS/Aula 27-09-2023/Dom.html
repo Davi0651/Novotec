@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Exemplo de DOM</title>
+    </head>
+    <body>
+        <h1></h1>
+        <p id="meuParagrafo">Este é um parágrafo.</p>
+        <button id="meuBotao">Clique em mim</button>
+        <button id="resetBotao">Resetar</button>
+
+        <script>
+            // Acessando elementos do DOM
+            var titulo = document.querySelector("h1");
+            var paragrafo = document.getElementById("meuParagrafo");
+            var botao = document.getElementById("meuBotao");
+            var resetBotao = document.getElementById("resetBotao");
+
+            // Armazenar o texto original do parágrafo
+            var textoOriginal = paragrafo.innerHTML;
+
+            // Alterando conteúdo e estilo
+            titulo.innerHTML = "Novotec - Senac";
+            paragrafo.style.color = "green";
+
+            // Adicionando um evento de clique no botão
+            botao.addEventListener("click", function() {
+                paragrafo.innerHTML = "Este é um exemplo simples de DOM";
+            });
+
+            // Botão de reset
+            resetBotao.addEventListener("click", function() {
+                paragrafo.innerHTML = textoOriginal;
+            })
+
+        </script>
+    </body>
+</html>
